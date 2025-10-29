@@ -1,0 +1,11 @@
+<img src="/Logo GoEvents.jpeg" class="img-lado">
+<div class="caixa1">
+    <input type="email" [(ngModel)]="emailUsuario" placeholder="Digite o email"><br>
+    <input type="password" [(ngModel)]="senhaUsuario" placeholder="Digite a senha"><br>
+    <div class="linha">
+        <p>Nao possui um cadastro ?</p>
+        <button class="botao-cadastro" (click)="BotaoCadastro($event)">Cadastrar</button><br>
+    </div>
+
+    <button class="Entrar"(click)="Verificacao($event)">Entrar</button><br><br>
+</div>

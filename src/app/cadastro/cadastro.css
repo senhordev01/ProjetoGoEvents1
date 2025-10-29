@@ -1,0 +1,84 @@
+.img-lado {
+  position: fixed;
+  left: 50px;
+  top: 30px;
+  width: 43vw;
+  max-width: 500px;
+  height: auto;
+  max-height: 800px;
+  object-fit: cover;
+}
+
+.Area-Cadastro {
+  margin-left: calc(43vw + 50px);
+  width: calc(100% - (43vw + 50px));
+  min-height: 100vh;
+  background-color: #053bcf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+input {
+  width: 500px;
+  max-width: 90%;
+  height: 70px;
+  outline: none;
+  border: none;
+  text-align: center;
+  border-radius: 30px;
+  margin: 6px 0;
+}
+
+.Pergunta {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.Realizar-Login {
+  border: none;
+  width: 100px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.Efetuar-Cadastro {
+  background-color: rgb(4, 160, 4);
+  color: white;
+  border: none;
+  width: 250px;
+  max-width: 80%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .img-lado {
+    display: none;
+  }
+
+  .Area-Cadastro {
+    margin-left: 0;
+    width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 40px;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .Efetuar-Cadastro {
+    width: 80%;
+  }
+}
