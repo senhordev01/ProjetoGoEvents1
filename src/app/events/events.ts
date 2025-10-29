@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-events',
@@ -10,13 +12,14 @@ import { Title } from '@angular/platform-browser';
   standalone: true
 })
 
-export class Events {
-  constructor(private readonly titleService:Title){
+export class Events{
+  constructor(private readonly titleService:Title, private router:Router){
     titleService.setTitle('GoEvents');
   }
+
   Botoes:string[] = [];
   contador:number = 1;
-  Usuario:string = "Vip";
+  Usuario:string = "Normal";
   AdicionarBotoes(event:any){
     try{
       if (this.Usuario === "Vip"){
@@ -36,4 +39,9 @@ export class Events {
       alert(error.message);
     }
   }
+
+  PaginaProjetos(NomeBotao:string){
+    this.router.navigate(["inicio", NomeBotao])
+  }
+
 }

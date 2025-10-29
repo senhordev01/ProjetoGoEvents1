@@ -1,5 +1,5 @@
 <button class="Adicionar-Botoes" (click)="AdicionarBotoes($event)">+</button>
 
 <div *ngFor="let btn of Botoes">
-    <button class="Novos-Botoes">{{btn}}</button>
+    <button class="Novos-Botoes" (click)="PaginaProjetos(btn)">{{btn}}</button>
 </div>

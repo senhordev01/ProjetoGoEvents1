@@ -1,12 +1,13 @@
 .img-lado {
   position: fixed;
-  left: 50px;
+  left: 10px;
   top: 30px;
   width: 43vw;
   max-width: 500px;
   height: auto;
   max-height: 800px;
   object-fit: cover;
+  transform: scale(1.1); 
 }
 
 .Area-Cadastro {
