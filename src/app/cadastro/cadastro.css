@@ -1,18 +1,21 @@
 .img-lado {
   position: fixed;
-  left: 10px;
-  top: 30px;
+  top: 3vh;
+  left: 3vw;
   width: 43vw;
   max-width: 500px;
   height: auto;
-  max-height: 800px;
+  max-height: 80vh;
   object-fit: cover;
-  transform: scale(1.1); 
+  transform: scale(1.2);
+  transform-origin: top left;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
 }
 
 .Area-Cadastro {
-  margin-left: calc(43vw + 50px);
-  width: calc(100% - (43vw + 50px));
+  margin-left: calc(43vw * 1.2 + 50px);
+  width: calc(100% - (43vw * 1.2 + 50px));
   min-height: 100vh;
   background-color: #053bcf;
   display: flex;
@@ -62,6 +65,20 @@ input {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .img-lado {
+    width: 35vw;
+    max-width: 400px;
+    transform: scale(1.1);
+  }
+
+  .Area-Cadastro {
+    margin-left: calc(35vw * 1.1 + 30px);
+    width: calc(100% - (35vw * 1.1 + 30px));
+    padding-top: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .img-lado {
     display: none;
@@ -81,5 +98,22 @@ input {
 
   .Efetuar-Cadastro {
     width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  input {
+    width: 95%;
+    height: 60px;
+  }
+
+  .Efetuar-Cadastro {
+    width: 90%;
+    height: 45px;
+  }
+
+  .Realizar-Login {
+    width: 80px;
+    height: 28px;
   }
 }

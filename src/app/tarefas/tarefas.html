@@ -2,7 +2,9 @@
     <div class="Criar-Tarefas">
         <form method="post">
             <input type="checkbox" name="tarefa-usuario">
-            <label for="tarefa-usuario">Criar um site</label>
+            <div class="Criar-Tarefas" *ngFor="let CriarTarefas of NovasTarefas ">
+                <label for="tarefa-usuario">{{CriarTarefas}}</label>
+            </div>
         </form>
     </div>
 </div>
