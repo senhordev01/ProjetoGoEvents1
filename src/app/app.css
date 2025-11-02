@@ -1,0 +1,8 @@
+/* Correção Mínima de Tonalidade em um contexto Angular/Geral */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Garante que o fundo da página (onde o lado esquerdo aparece) é branco puro */
+  background-color: #a72020; 
+}

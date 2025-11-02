@@ -1,21 +1,20 @@
 .img-lado {
   position: fixed;
   top: 3vh;
-  left: 3vw;
-  width: 43vw;
+  left: 1vw;
+  width: 40vw;
   max-width: 500px;
   height: auto;
   max-height: 80vh;
   object-fit: cover;
-  transform: scale(1.2);
-  transform-origin: top left;
-  z-index: 1000;
+  transform: scale(1.0);
+  transform-origin: top left; 
   transition: all 0.3s ease-in-out;
 }
 
 .Area-Cadastro {
-  margin-left: calc(43vw * 1.2 + 50px);
-  width: calc(100% - (43vw * 1.2 + 50px));
+  margin-left: calc(40vw + 50px);
+  width: calc(100% - (40vw + 50px));
   min-height: 100vh;
   background-color: #053bcf;
   display: flex;
@@ -65,16 +64,29 @@ input {
   cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+  .img-lado {
+    width: 38vw;
+    max-width: 450px;
+    transform: scale(1.05);
+  }
+
+  .Area-Cadastro {
+    margin-left: calc(38vw + 40px);
+    width: calc(100% - (38vw + 40px));
+  }
+}
+
 @media (max-width: 1024px) {
   .img-lado {
     width: 35vw;
     max-width: 400px;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   .Area-Cadastro {
-    margin-left: calc(35vw * 1.1 + 30px);
-    width: calc(100% - (35vw * 1.1 + 30px));
+    margin-left: calc(35vw + 30px);
+    width: calc(100% - (35vw + 30px));
     padding-top: 40px;
   }
 }

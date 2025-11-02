@@ -1,40 +1,20 @@
 .img-lado {
   position: fixed;
-  left: 3vw;
   top: 3vh;
-  width: 43vw;
-  max-width: 500px;
-  height: auto;
+  left: 3vw;
+  max-width: 43vw;
   max-height: 80vh;
-  object-fit: cover;
-  transform: scale(1.2);
-  transform-origin: top left;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   z-index: 1000;
-}
+  transition: all 0.3s ease-in-out;
 
-@media (max-width: 768px) {
-  .img-lado {
-    width: 60vw;
-    max-width: 400px;
-    top: 5vh;
-    left: 5vw;
-    transform: scale(1.1);
-  }
-}
-
-@media (max-width: 480px) {
-  .img-lado {
-    width: 80vw;
-    max-width: 300px;
-    top: 3vh;
-    left: 10px;
-    transform: scale(1);
-  }
 }
 
 .caixa1 {
-  margin-left: calc(43vw * 1.2 + 50px);
-  width: calc(100% - (43vw * 1.2 + 50px));
+  margin-left: calc(40vw + 50px);
+  width: calc(100% - (40vw + 40px));
   min-height: 100vh;
   background-color: #053bcf;
   display: flex;
@@ -42,17 +22,19 @@
   align-items: center;
   padding-top: 150px;
   padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
 }
 
 input {
   width: 500px;
+  max-width: 90%;
   height: 70px;
   outline: none;
   border: none;
   text-align: center;
   border-radius: 30px;
-  margin: 2px 0;
+  margin: 6px 0;
 }
 
 .linha {
@@ -74,10 +56,10 @@ input {
   color: white;
   border: none;
   width: 250px;
+  max-width: 80%;
   height: 50px;
   border-radius: 30px;
   margin-top: 30px;
-  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -89,9 +71,7 @@ input {
   .caixa1 {
     margin-left: 0;
     width: 100vw;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 40px;
+    padding: 60px 15px 30px 15px;
   }
 
   input {
@@ -100,5 +80,15 @@ input {
 
   .Entrar {
     width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  input {
+    height: 60px;
+  }
+
+  .Entrar {
+    height: 45px;
   }
 }
