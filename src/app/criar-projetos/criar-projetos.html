@@ -1,5 +1,12 @@
 <div class="Criacao-Projetos">
-  <input type="text" [(ngModel)]="nomeProjeto" placeholder="Digite um nome para o seu projeto"><br>
+  <p id="Nome-Projeto">Nome do projeto</p>
+  <input type="text" [(ngModel)]="nomeProjeto" placeholder="Digite um nome para o seu projeto">
+  <p id="Nome-Representante">Nome do representante</p>
+  <input type="text" [(ngModel)]="nomeRepresentante" placeholder="Digite o nome o nome do representante">
+  <p id="Email-Representante">Email do representante</p>
+  <input type="email" [(ngModel)]="emailRepresentante" placeholder="Digite o email do representante">
+  <p id="Previsao-Termino">Previsao de termino</p>
+  <input type="date" [(ngModel)]="previsaoTermino">
   <button type="button" class="Criar-Projeto" (click)="criarProjeto()">Criar Projeto</button>
   <button (click)="FecharJanela()" class="Fechar-Janela">x</button>
 </div>

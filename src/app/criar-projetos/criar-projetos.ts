@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class CriarProjetos {
   nomeProjeto: string = "";
+  nomeRepresentante:string = "";
+  emailRepresentante:string = "";
+  previsaoTermino:string = "";
   private dialogRef = inject(DialogRef, { optional: true });
 
   FecharJanela() {
