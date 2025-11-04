@@ -2,19 +2,20 @@
   position: fixed;
   top: 3vh;
   left: 3vw;
-  max-width: 43vw;
-  max-height: 80vh;
-  width: auto;
+  width: 35vw;
+  max-width: 500px;
   height: auto;
-  object-fit: contain;
-  z-index: 1000;
+  max-height: 80vh;
+  object-fit: cover;
+  transform: scale(1.0);
+  transform-origin: top left; 
   transition: all 0.3s ease-in-out;
-
 }
+
 
 .caixa1 {
   margin-left: calc(40vw + 50px);
-  width: calc(100% - (40vw + 40px));
+  width: calc(100% - (40vw + 50px));
   min-height: 100vh;
   background-color: #053bcf;
   display: flex;
@@ -63,7 +64,7 @@ input {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .img-lado {
     display: none;
   }

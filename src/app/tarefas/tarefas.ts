@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
   selector: 'app-tarefas',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './tarefas.html',
   styleUrl: './tarefas.css'
 })

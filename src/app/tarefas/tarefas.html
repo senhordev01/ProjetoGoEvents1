@@ -1,10 +1,10 @@
 <div class="Tarefas">
-    <div class="Criar-Tarefas">
-        <form method="post">
-            <input type="checkbox" name="tarefa-usuario">
-            <div class="Criar-Tarefas" *ngFor="let CriarTarefas of NovasTarefas ">
-                <label for="tarefa-usuario">{{CriarTarefas}}</label>
-            </div>
-        </form>
-    </div>
+  <div class="Criar-Tarefas">
+    <form method="post">
+      <div *ngFor="let tarefa of CriarTarefas">
+        <input type="checkbox" [id]="tarefa" name="tarefa-usuario">
+        <label [for]="tarefa">{{ tarefa }}</label>
+      </div>
+    </form>
+  </div>
 </div>

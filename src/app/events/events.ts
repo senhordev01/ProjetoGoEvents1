@@ -1,20 +1,26 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
+import { Usuario } from '../services/usuario';
+import { FormsModule } from "@angular/forms";
+import { Dialog } from '@angular/cdk/dialog';
+import { CriarProjetos } from '../criar-projetos/criar-projetos';
 
 @Component({
   selector: 'app-events',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './events.html',
   styleUrls: ['./events.css'],
   standalone: true
 })
 
 export class Events{
-  constructor(private readonly titleService:Title, private router:Router){
+  nomeUsuario:string = "";
+  constructor(private readonly titleService:Title, public router:Router, private usuarioService:Usuario){
     titleService.setTitle('GoEvents');
+    this.nomeUsuario = this.usuarioService.getNomeUsuario();
+
   }
 
   Botoes:string[] = [];
@@ -25,7 +31,7 @@ export class Events{
       if (this.Usuario === "Vip"){
         if (this.Botoes.length == 20){
           throw new Error("Seu limite Vip atingiu o ponto maximo"); 
-        }
+        } 
       }else if (this.Usuario === "Normal"){
         if (this.Botoes.length == 10){
           throw new Error("Voce atingiu o seu limite");
@@ -40,8 +46,20 @@ export class Events{
     }
   }
 
-  PaginaProjetos(NomeBotao:string){
-    this.router.navigate(["inicio", NomeBotao])
-  }
+  private dialog = inject(Dialog);
+  PaginaProjetos() {
+    const dialogRef = this.dialog.open(CriarProjetos, { disableClose: true });
 
+    dialogRef.closed.subscribe((nomeBotao) => {
+      if (nomeBotao && typeof nomeBotao === "string" && nomeBotao.trim() !== '') {
+        this.Botoes.push(nomeBotao.trim());
+        this.contador++;
+
+      }else if (nomeBotao === undefined){
+        console.log("Janela Fechada");
+      } else {
+        alert("Você precisa inserir um nome antes de criar o projeto!");
+      }
+    });
+  }
 }

@@ -75,11 +75,9 @@ export class Home {
     this.AnalisarSenha();
     
     const emailValido = this.emailUsuario.includes("@") && this.emailUsuario.includes(".com");
-    const emailNaoValido = this.emailUsuario.trim() === "";
     const senhaValida = this.senhaUsuario.length >=6 && this.senhaUsuario.length <= 20;
-    const senhaNaoValida = this.senhaUsuario.trim() === "";
     
-    if (emailValido && !emailNaoValido && senhaValida && !senhaNaoValida){
+    if (emailValido && senhaValida){
       this.router.navigate(["inicio"]);
     }
   }
