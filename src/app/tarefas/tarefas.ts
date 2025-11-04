@@ -1,29 +1,39 @@
+import { Dialog } from '@angular/cdk/dialog';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, inject} from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CriarTarefas } from '../criar-tarefas/criar-tarefas';
 
 
 @Component({
   selector: 'app-tarefas',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './tarefas.html',
-  styleUrl: './tarefas.css'
+  styleUrls: ['./tarefas.css'],
+  standalone:true
 })
-export class Tarefas implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+export class Tarefas{
+  private dialog = inject(Dialog);
+  contador:number = 1;
+  checkBox:string[] = [];
+  PaginaTarefas(){
+    const dialogRef = this.dialog.open(CriarTarefas,{disableClose:true});
 
-  ngOnInit() {
-    const projetoID = this.route.snapshot.paramMap.get('id');
-    console.log('Projeto carregado:', projetoID);
-  }
-
-  CriarTarefas:string[] = [];
-  Contador:number = 1;
-
-  TarefasNovas(event:any){
-    const marcadores = `Tarefa ${this.Contador}`;
-    this.CriarTarefas.push(marcadores);
-    this.Contador++;
+    dialogRef.closed.subscribe((nomeCheckBox) => {
+      if(nomeCheckBox && typeof nomeCheckBox === "string" && nomeCheckBox.trim() !== ""){
+        try{
+          if(this.checkBox.length === 10){
+            throw new Error("Voce atingiu o seu limite de tarefas criadas");
+          }
+          this.checkBox.push(nomeCheckBox.trim());
+          this.contador++;
+        }catch(error:any){
+          alert(`Erro: ${error.message}`);
+        }
+      }else if (nomeCheckBox === undefined){
+        console.log("Janela Fechada");
+      }
+    });
   }
   
 }

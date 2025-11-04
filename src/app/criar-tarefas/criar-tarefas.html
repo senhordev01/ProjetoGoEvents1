@@ -1,1 +1,5 @@
-<p>criar-tarefas works!</p>
+<div class="Criacao-Tarefas">
+    <input type="text" [(ngModel)]="nomeTarefa" placeholder="Crie sua Tarefa"><br>
+    <button type="button" class="Criar-Tarefa" (click)="criarTarefa()">Criar Tarefa</button>
+     <button (click)="FecharJanela()" class="Fechar-Janela">x</button>
+</div>

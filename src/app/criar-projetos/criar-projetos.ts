@@ -13,7 +13,7 @@ export class CriarProjetos {
   nomeProjeto: string = "";
   private dialogRef = inject(DialogRef, { optional: true });
 
-  protected FecharJanela() {
+  FecharJanela() {
     this.dialogRef?.close(undefined);
   }
 

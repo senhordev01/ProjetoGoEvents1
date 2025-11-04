@@ -16,7 +16,7 @@ import { CriarProjetos } from '../criar-projetos/criar-projetos';
 })
 export class Events {
   nomeUsuario: string = "";
-  Botoes: string[] = [];
+  Botoes: {id:number, label:string}[] = [];
   contador: number = 1;
   Usuario: string = "Normal";
 
@@ -43,16 +43,21 @@ export class Events {
           if (this.Usuario === "Normal" && this.Botoes.length >= 10) {
             throw new Error("Você atingiu o seu limite");
           }
-          this.Botoes.push(nomeBotao.trim());
+          this.Botoes.push({
+            id: this.contador,
+            label: nomeBotao.trim()
+          });
+
           this.contador++;
         } catch (error: any) {
           alert(error.message);
         }
       } else if (nomeBotao === undefined) {
         console.log("Janela Fechada");
-      } else {
-        alert("Você precisa inserir um nome antes de criar o projeto!");
       }
     });
   }
+  existeBotaoComId(id: number): boolean {
+  return this.Botoes.some(btn => btn.id === id);
+}
 }

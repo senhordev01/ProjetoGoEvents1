@@ -1,10 +1,7 @@
-<div class="Tarefas">
-  <div class="Criar-Tarefas">
-    <form method="post">
-      <div *ngFor="let tarefa of CriarTarefas">
-        <input type="checkbox" [id]="tarefa" name="tarefa-usuario">
-        <label [for]="tarefa">{{ tarefa }}</label>
-      </div>
-    </form>
-  </div>
+<button class="Adicionar-CheckBox" (click)="PaginaTarefas()">+</button>
+
+<div *ngFor="let ckbx of checkBox">
+  <input type="checkbox" [id]="'caixa-confirmacao'">
+  <label [for]="'caixa-confirmacao'">{{ckbx}}</label>
+
 </div>
