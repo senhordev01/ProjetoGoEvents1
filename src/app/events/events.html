@@ -1,5 +1,10 @@
 <button class="Adicionar-Botoes" (click)="PaginaProjetos()">+</button>
-<p >ola {{nomeUsuario}}</p>
+<div class="pessoa-cadastrada">
+   <p id="#nome">olá, Rogério {{nomeUsuario}}</p> 
+</div>
+
+
+
 
 <div *ngFor="let btn of Botoes">
     <button class="Novos-Botoes" (click)="router.navigate(['inicio', btn.id])">{{btn.label}}</button>

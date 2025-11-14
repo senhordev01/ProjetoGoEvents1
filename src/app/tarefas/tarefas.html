@@ -1,7 +1,9 @@
-<button class="Adicionar-CheckBox" (click)="PaginaTarefas()">+</button>
-
-<div *ngFor="let ckbx of checkBox">
+<div class="navbar">
+  <button class="Sair" (click)="SairTarefa()">Sair</button>
+</div>
+<div class="Cor-Fundo">
+  <button class="Adicionar-CheckBox" (click)="PaginaTarefas()">+</button>
+  <div *ngFor="let ckbx of checkBox">
   <input type="checkbox" [id]="'caixa-confirmacao'">
   <label [for]="'caixa-confirmacao'">{{ckbx}}</label>
-
 </div>

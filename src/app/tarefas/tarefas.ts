@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CriarTarefas } from '../criar-tarefas/criar-tarefas';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,6 +17,9 @@ export class Tarefas{
   private dialog = inject(Dialog);
   contador:number = 1;
   checkBox:string[] = [];
+
+  constructor(private router:Router){}
+
   PaginaTarefas(){
     const dialogRef = this.dialog.open(CriarTarefas,{disableClose:true});
 
@@ -36,4 +40,7 @@ export class Tarefas{
     });
   }
   
+  SairTarefa(){
+    this.router.navigate(["inicio"]);
+  }
 }
