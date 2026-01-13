@@ -7,6 +7,9 @@
   <input type="email" [(ngModel)]="emailRepresentante" placeholder="Digite o email do representante">
   <p id="Previsao-Termino">Previsao de termino</p>
   <input type="date" [(ngModel)]="previsaoTermino">
+  
+  <input type="file" [(ngModel)]="EnviarArquivo" accept=".jpg, .png" id="Foto-Projeto">
+  
   <button type="button" class="Criar-Projeto" (click)="criarProjeto()">Criar Projeto</button>
   <button (click)="FecharJanela()" class="Fechar-Janela">x</button>
 </div>

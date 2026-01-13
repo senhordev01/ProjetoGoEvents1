@@ -35,7 +35,7 @@ export class Cadastro {
 
   VerificarEmail() {
     try {
-      if (this.emailUsuario.includes('@') && this.emailUsuario.includes('.com')) {
+      if (this.emailUsuario.includes('@') && this.emailUsuario.includes('.')) {
         console.log('formato do email correto');
       } else if (this.emailUsuario === '') {
         throw new Error('O campo email deve estar preenchido');
@@ -103,7 +103,7 @@ export class Cadastro {
 
     const emailValido =
       this.emailUsuario.includes('@') &&
-      this.emailUsuario.includes('.com') &&
+      this.emailUsuario.includes('.') &&
       this.senhaUsuario.length >= 6 &&
       this.senhaUsuario.length <= 20;
     const emailAutentico = this.confirmarEmail === this.emailUsuario;

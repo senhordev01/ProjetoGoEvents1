@@ -1,0 +1,47 @@
+.Menu-Principal{
+    position: absolute;
+    background-color:  #0047A9;
+    width: 300px;
+    height: 100%;
+    top: 55px;
+    left: 0;
+}
+#Perfil-Pessoal{
+    display: block;
+    position: relative;
+    width: 300px;
+    height:100px;
+    background-color: rgba(0, 0, 139, 0);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    border: 0;
+    font-weight: bolder;
+
+}
+#Github-Projeto{
+    display: block;
+    position: relative;
+    bottom: -10px;
+    width: 300px;
+    height:100px;
+    background-color: rgba(0, 0, 139, 0);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    border: 0;
+    font-weight: bolder;
+}
+#Plano-Usuario{
+    position: relative;
+    width: 300px;
+    bottom: -20px;
+    height:100px;
+    background-color: rgba(0, 0, 139, 0);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    border: 0;
+    font-weight: bolder;
+
+}

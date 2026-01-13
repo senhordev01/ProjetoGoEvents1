@@ -1,32 +1,15 @@
 <button class="Adicionar-Botoes" (click)="PaginaProjetos()">+</button>
 <div class="pessoa-cadastrada">
-   <p id="#nome">olá,{{nomeUsuario}}</p> 
+    <div class="Menu-Icone">
+        <button id="Menu" (click)="MenuPrincipal()">
+            <img src="/Img_Menu.png" class="Img-Menu">
+        </button>
+        
+    </div>
+   <p id="#nome">olá,{{nomeUsuario}}</p>
 </div>
-
-
-
-
 <div *ngFor="let btn of Botoes">
     <button class="Novos-Botoes" (click)="router.navigate(['inicio', btn.id])">{{btn.label}}</button>
 </div>
 
-<div *ngIf="existeBotaoComId(1)"></div>
-<div *ngIf="existeBotaoComId(2)"></div>
-<div *ngIf="existeBotaoComId(3)"></div>
-<div *ngIf="existeBotaoComId(4)"></div>
-<div *ngIf="existeBotaoComId(5)"></div>
-<div *ngIf="existeBotaoComId(6)"></div>
-<div *ngIf="existeBotaoComId(7)"></div>
-<div *ngIf="existeBotaoComId(8)"></div>
-<div *ngIf="existeBotaoComId(9)"></div>
-<div *ngIf="existeBotaoComId(10)"></div>
-<div *ngIf="existeBotaoComId(11)"></div>
-<div *ngIf="existeBotaoComId(12)"></div>
-<div *ngIf="existeBotaoComId(13)"></div>
-<div *ngIf="existeBotaoComId(14)"></div>
-<div *ngIf="existeBotaoComId(15)"></div>
-<div *ngIf="existeBotaoComId(16)"></div>
-<div *ngIf="existeBotaoComId(17)"></div>
-<div *ngIf="existeBotaoComId(18)"></div>
-<div *ngIf="existeBotaoComId(19)"></div>
-<div *ngIf="existeBotaoComId(20)"></div>
+<div *ngIf="existeBotaoComId(1, 20)"></div>

@@ -8,6 +8,11 @@
     background-color: #00b300;
     color: white;
     font-size: 32px;
+    border: none;
+    cursor: pointer;
+}
+.Adicionar-CheckBox:hover{
+    border: 3px solid rgba(5, 21, 196, 0.769);
 }
 .navbar{
     width: 100%;

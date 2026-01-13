@@ -14,7 +14,9 @@ export class CriarProjetos {
   nomeRepresentante:string = "";
   emailRepresentante:string = "";
   previsaoTermino:string = "";
-  minPrevisao:string = "2025-01-01";
+  minPrevisao = new Date(new Date().setHours(0, 0, 0, 0));
+  EnviarArquivo:any;
+  
   private dialogRef = inject(DialogRef, { optional: true });
 
   FecharJanela() {
@@ -31,7 +33,7 @@ export class CriarProjetos {
         throw new Error("O nao é possível criar um projeto sem o nome do representante ");
       }else if(this.emailRepresentante.trim()=== ""){
         throw new Error("O nao é possível criar um projeto sem o email do representante ");
-      }else if(!this.emailRepresentante.includes("@") && !this.emailRepresentante.includes(".com")){
+      }else if(!this.emailRepresentante.includes("@") && !this.emailRepresentante.includes(".")){
         throw new Error("A formataçao do email está incorreta");
       }else if(this.previsaoTermino === ""){
         throw new Error("O campo da previsao nao pode ficar vazio");

@@ -3,6 +3,7 @@ import { Home } from './components/home/home';
 import { Events } from './events/events';
 import { Cadastro } from './cadastro/cadastro';
 import { Tarefas } from './tarefas/tarefas';
+import { PerfilPessoal } from './perfil-pessoal/perfil-pessoal';
 
 export const routes: Routes = [
     {
@@ -24,5 +25,9 @@ export const routes: Routes = [
     {
         path:"inicio/:id",
         component:Tarefas
+    },
+    {
+        path:"perfil",
+        component:PerfilPessoal
     }
 ];

@@ -18,7 +18,7 @@ export class Home {
 
   EmailInserido(){
     try{
-      if(this.emailUsuario.includes("@") && this.emailUsuario.includes(".com")){
+      if(this.emailUsuario.includes("@") && this.emailUsuario.includes(".")){
         console.log("formato correto");
 
       }else{

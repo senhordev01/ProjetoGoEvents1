@@ -1,7 +1,7 @@
 .Criacao-Projetos {
   background-color: white;
   width: 600px;
-  height: 600px;
+  height: 650px;
   border-radius: 20px;
   display: flex;
   flex-direction: column; 
@@ -27,7 +27,7 @@ input {
   color: white;
   border: none;
   cursor: pointer;
-  top: 10px;
+  top: -15px;
 }
 
 .Fechar-Janela {

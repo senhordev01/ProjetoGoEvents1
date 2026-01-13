@@ -6,6 +6,8 @@ import { Usuario } from '../services/usuario';
 import { FormsModule } from "@angular/forms";
 import { Dialog } from '@angular/cdk/dialog';
 import { CriarProjetos } from '../criar-projetos/criar-projetos';
+import { MenuPrincipal } from '../menu-principal/menu-principal';
+
 
 @Component({
   selector: 'app-events',
@@ -57,7 +59,11 @@ export class Events {
       }
     });
   }
-  existeBotaoComId(id: number): boolean {
-  return this.Botoes.some(btn => btn.id === id);
-}
+  existeBotaoComId(min: number, max:number): boolean {
+    return this.Botoes.some(btn => btn.id >= min && btn.id <= max);
+  }
+  MenuPrincipal(){
+    const dialogRef = this.dialog.open(MenuPrincipal);
+
+  }
 }

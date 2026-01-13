@@ -55,13 +55,16 @@ input {
 .Entrar {
   background-color: rgb(4, 160, 4);
   color: white;
-  border: none;
+  border: 0;
   width: 250px;
   max-width: 80%;
   height: 50px;
   border-radius: 30px;
   margin-top: 30px;
   cursor: pointer;
+}
+.Entrar:hover{
+  border: 3px solid rgba(5, 21, 196, 0.769);
 }
 
 @media (max-width: 900px) {
