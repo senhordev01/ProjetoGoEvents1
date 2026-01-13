@@ -1,7 +1,7 @@
 .Adicionar-Botoes{
   position: fixed;
   bottom: 20px;    
-  right: 20px;  
+  right: 5px;  
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -15,7 +15,9 @@
     border: 3px solid rgba(5, 21, 196, 0.769);
 }
 
-.pessoa-cadastrada {     
+.pessoa-cadastrada {
+    position: fixed;
+    left: 0;
     width: 100%;
     background-color: #0047A9; 
     height: 55px;              
@@ -69,15 +71,17 @@ div{
     height: 40px;
 }
 #Menu{
+    position: absolute;
     background-color: rgba(0, 255, 255, 0);
-    position: fixed;
     right: 1537px;
     top: 5px;
     border: 0;
+    left: 0;
     cursor: pointer;
 }
 #Menu:hover{
-    position: fixed;
     background-color: rgba(255, 255, 255, 0.301);
     border-radius: 15%;
+    width: 50px;
+    height: 50px;
 }

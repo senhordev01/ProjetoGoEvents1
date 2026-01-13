@@ -45,3 +45,16 @@
     font-weight: bolder;
 
 }
+
+#Perfil-Pessoal:hover{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#Github-Projeto:hover{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+#Plano-Usuario:hover{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
