@@ -63,6 +63,11 @@ input {
   margin-left: 10px;
   cursor: pointer;
 }
+.Efetuar-Cadastro:hover{
+  border: 3px solid rgba(5, 21, 196, 0.769);
+  width: 280px;
+  height: 60px;
+}
 
 @media (max-width: 1200px) {
   .img-lado {

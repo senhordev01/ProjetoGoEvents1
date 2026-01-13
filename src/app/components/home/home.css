@@ -65,6 +65,8 @@ input {
 }
 .Entrar:hover{
   border: 3px solid rgba(5, 21, 196, 0.769);
+  width: 280px;
+  height: 60px;
 }
 
 @media (max-width: 900px) {
