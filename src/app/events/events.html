@@ -6,7 +6,9 @@
         </button>
         
     </div>
-   <p id="#nome">olá,{{nomeUsuario}}</p>
+    <div id="Nome-Pessoa">
+        <p id="#nome">olá,{{nomeUsuario}}</p>
+    </div>
 </div>
 <div *ngFor="let btn of Botoes">
     <button class="Novos-Botoes" (click)="router.navigate(['inicio', btn.id])">{{btn.label}}</button>
