@@ -22,9 +22,10 @@
     background-color: #0047A9; 
     height: 55px; 
     position: fixed;
-    top: 0;           
+    top: 0;
     display: flex;
-    justify-content: end; 
+    justify-content: center;
+    flex-direction: row;
     align-items: center;       
     color: white;
     font-family: Arial, sans-serif;
@@ -60,6 +61,11 @@ body {
 div{
     display: inline-block;  
 }
+#Nome-Pessoa{
+    position: absolute;
+    right: 0;
+}
+
 #Menu-Principal{
     font-size: 25px;
     background-color: rgba(255, 235, 205, 0);
@@ -78,13 +84,13 @@ div{
 #Menu{
     position: absolute;
     background-color: rgba(0, 255, 255, 0);
-    right: 1537px;
+    justify-content: flex-start;
+    align-items: flex-start;   
     top: 5px;
     border: 0;
     left: 0;
     cursor: pointer;
-    justify-content: start;
-    align-items: start;
+
 }
 #Menu:hover{
     background-color: rgba(255, 255, 255, 0.301);
