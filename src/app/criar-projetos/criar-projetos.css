@@ -4,16 +4,15 @@
   height: 650px;
   border-radius: 20px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
-  align-items: center;    
-  gap: 1px; 
-  position: relative;
+  align-items: center;
+  gap: 1px;
 }
 
 input {
-  width: 450px; 
-  height: 65px; 
+  width: 450px;
+  height: 65px;
   text-align: center;
   border-radius: 10px;
   margin: 1px 0;
@@ -32,7 +31,7 @@ input {
 
 .Fechar-Janela {
   position: absolute;
-  top: 9px;          
+  top: 9px;
   right: 11px;
   font-size: 30px;
   border: none;
@@ -59,4 +58,19 @@ input {
 #Previsao-Termino {
   position: relative;
   top: 0;
+}
+
+@media only screen and (min-width:992px) {
+  .Criacao-Projetos {
+    background-color: white;
+    width: 600px;
+    height: 540px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+  }
+
 }
