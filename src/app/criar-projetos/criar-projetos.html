@@ -11,5 +11,8 @@
   <input type="file" [(ngModel)]="EnviarArquivo" accept=".jpg, .png" id="Foto-Projeto">
   
   <button type="button" class="Criar-Projeto" (click)="criarProjeto()">Criar Projeto</button>
-  <button (click)="FecharJanela()" class="Fechar-Janela">x</button>
+
+  <button (click)="FecharJanela()" class="Fechar-Janela">
+    <img src="/Botao_Fechar.png" width="30px" style="margin-top: 30px;">
+  </button>
 </div>

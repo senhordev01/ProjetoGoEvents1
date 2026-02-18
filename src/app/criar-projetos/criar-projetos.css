@@ -31,12 +31,12 @@ input {
 
 .Fechar-Janela {
   position: absolute;
-  top: 9px;
-  right: 11px;
-  font-size: 30px;
   border: none;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  margin-top: -550px;
+  margin-left: 550px;
+  
 }
 
 #Nome-Projeto {
@@ -64,7 +64,7 @@ input {
   .Criacao-Projetos {
     background-color: white;
     width: 600px;
-    height: 540px;
+    height: 580px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
