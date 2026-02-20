@@ -8,7 +8,7 @@
   <p id="Previsao-Termino">Previsao de termino</p>
   <input type="date" [(ngModel)]="previsaoTermino">
   
-  <input type="file" [(ngModel)]="EnviarArquivo" accept=".jpg, .png" id="Foto-Projeto">
+  <!-- <input type="file" (change)="selecionarArquivo($event)" accept=".jpg, .png, .pdf"> -->
   
   <button type="button" class="Criar-Projeto" (click)="criarProjeto()">Criar Projeto</button>
 

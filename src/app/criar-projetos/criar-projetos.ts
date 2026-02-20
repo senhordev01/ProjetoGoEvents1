@@ -15,7 +15,6 @@ export class CriarProjetos {
   emailRepresentante:string = "";
   previsaoTermino:string = "";
   minPrevisao = new Date(new Date().setHours(0, 0, 0, 0));
-  EnviarArquivo:any;
   
   private dialogRef = inject(DialogRef, { optional: true });
 
